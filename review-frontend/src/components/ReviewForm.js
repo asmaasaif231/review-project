@@ -29,7 +29,7 @@ function  ReviewForm(props){
               
        
 <div className="feedback">
-<form onSubmit={(e)=> {e.preventDefault(); axios.post("http://localhost:2500/",{username,reviewRate,reviewComment})}}>
+<form name="contact-form" onSubmit={(e)=> {e.preventDefault(); axios.post("http://localhost:2400/addReview",{username,reviewRate,reviewComment})}}>
 <p>Please Enter your name</p>
 <label> <input value={username} onChange={(e)=>{setUsername(e.target.value); console.log(username);}} id="username" type ="text"/> </label>
 
@@ -54,8 +54,10 @@ function  ReviewForm(props){
 
 <textarea value={reviewComment} onChange={(e)=>{setReviewComment(e.target.value); console.log(reviewComment);}} id="reviewComment"  cols="100" name="commentText" rows="5" />
 
-  <div class="clear"></div> 
-  <input type="submit" value="Submit Review"/>
+ 
+  <input type="submit" value="Submit Review" />
+  
+
 
 </form>
                 
@@ -68,6 +70,9 @@ function  ReviewForm(props){
 
 </section>
 
+
+
+        
 </>
         );
     }
