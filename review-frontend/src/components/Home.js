@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import section1Image1 from '../images/image1.jpg';
 import ListSec1 from './ListSec1';
+import HomeSec1 from './homeSec1';
 
 
 
@@ -10,6 +11,7 @@ function  Home(){
     return (
         <>
         <Header/>
+        <HomeSec1/>
           {/* section 3 */}
           <section id="skills">
             <div className="container">
