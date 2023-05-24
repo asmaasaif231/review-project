@@ -1,22 +1,38 @@
-import { Link } from "react-router-dom";
-function  ListSec1(props){
+import { Link, useActionData } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+function  ListSec1(){
+// make container
+const [allItems, setAllItems] = useState("");
+useEffect(()=>{
+    axios.get("http://localhost:2400/getItems")
+    .then((res)=>{setAllItems(res.data)})
+},[]);
+
     return (
-        <div className="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.4s">
+        <>
+        {
+             allItems && allItems.map((item)=>(
+        <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.4s">
             <div className="pricing-plan">
                 <div className="pricing-month">
-                <img  className="img-responsive" src={props.imageName} />
+                <img  className="img-responsive" src={item.imageLink} />
                 </div>
                 <div className="pricing-title">
-                <h3>{props.CName}</h3>
+                <h3>{item.courseName}</h3>
         
                 </div>
-                <p>{props.Cdescription}</p>
-                <div> <Link to='/Detail'>  <button> View Details </button></Link></div>
-                <div> <Link to='/Review'>  <button> Add Review </button></Link></div>
+                <p>{item.courseDesc}</p>
+                {/* <div> <Link to='/Detail'>  <button> View Details </button></Link></div>
+                <div> <Link to='/Review'>  <button> Add Review </button></Link></div> */}
                 
                 
             </div>
         </div>
+   ))
+}
+        </>
         );
     }
     

@@ -18,8 +18,9 @@ function   Header(){
                 <ul className="nav navbar-nav navbar-right">
 
                     <li>  <Link to='/' className="smoothScroll">Home</Link></li>
-                    <li>  <Link to='/Detail' className="smoothScroll">Detailed Course</Link></li>
-                    <li>  <Link to='/Review' className="smoothScroll">Review</Link></li>
+                    <li>  <Link to='/Detail' className="smoothScroll">View Courses</Link></li>
+                    <li>  <Link to='/Review' className="smoothScroll">Add Review</Link></li>
+                  
                    <hr/>
 
                 </ul>

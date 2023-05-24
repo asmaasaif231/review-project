@@ -16,8 +16,9 @@ function  Detail(){
                 <section id="skills">
             <div className="container">
                 <div className="row">
-                  <Section1 imageName={section1Image1} eName="HR Course" ePosition="Head of HR Department"/>
-                  <Section2 CName="Stratigic human resource management" Cdescription="Deep focus on the HRM practices and policies applyed by organization in the world" Cduration="1 MONTH" CstartDate="12-MAY-2023" CendDate="12-JAN-2023" Clocation="Dubai" Clevel="Entry" />
+                               {/* <Section1/> */}
+                <Section2/>
+                
                 </div>
                 
             </div>
@@ -54,4 +55,3 @@ function  Detail(){
     }
     
 export default Detail;
-    
